@@ -14,7 +14,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="131dp"
-
         android:background="#FFFFFF"
         android:elevation="8dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -36,7 +35,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
-
             android:textColor="#212121"
 
             />
@@ -44,11 +42,9 @@
         <RadioButton
             android:id="@+id/OptionB"
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:background="#FFFFFF"
-
             android:textColor="#212121" />
 
         <RadioButton
@@ -56,9 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="43dp"
-
             android:background="#FFFFFF"
-
             android:textColor="#212121" />
     </LinearLayout>
 

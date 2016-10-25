@@ -2,24 +2,17 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-
-
-
     >
 <RelativeLayout
-
-android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0288D1"
     android:orientation="vertical">
-
-
     <TextView
         android:id="@+id/_ques"
         android:layout_width="350dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="47dp"
-
         android:background="#FFFFFF"
         android:elevation="8dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
@@ -43,19 +36,14 @@ android:layout_width="match_parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="#FFFFFF"
-
             android:textColor="#212121"
-
             />
-
         <CheckBox
             android:id="@+id/OptionB"
             android:layout_width="wrap_content"
-
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:background="#FFFFFF"
-
             android:textColor="#212121" />
 
         <CheckBox
@@ -63,9 +51,7 @@ android:layout_width="match_parent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="43dp"
-
             android:background="#FFFFFF"
-
             android:textColor="#212121" />
     </LinearLayout>
 
@@ -105,7 +91,5 @@ android:layout_width="match_parent"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp" />
-
-
 </RelativeLayout>
             </ScrollView>
