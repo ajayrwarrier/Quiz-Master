@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+   android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
 
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0288D1"
@@ -66,24 +70,24 @@
         android:id="@+id/Next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/linearLayout"
-        android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/linearLayout"
-        android:layout_marginBottom="38dp"
         android:background="#FFFFFF"
         android:text="@string/next"
-        android:textColor="#212121" />
+        android:textColor="#212121"
+        android:layout_alignTop="@+id/linearLayout"
+        android:layout_toRightOf="@+id/_ques"
+        android:layout_toEndOf="@+id/_ques" />
 
     <Button
         android:id="@+id/Submit"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/Next"
-        android:layout_alignEnd="@+id/linearLayout"
-        android:layout_alignRight="@+id/linearLayout"
         android:background="#FFFFFF"
         android:text="@string/submit"
-        android:textColor="#212121" />
+        android:textColor="#212121"
+        android:layout_below="@+id/Next"
+        android:layout_alignLeft="@+id/Next"
+        android:layout_alignStart="@+id/Next"
+        android:layout_marginTop="41dp" />
 
     <TextView
         android:id="@+id/count"
@@ -101,3 +105,4 @@
 
 
 </RelativeLayout>
+   </ScrollView>
