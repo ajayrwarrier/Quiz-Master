@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0288D1"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/_ques"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="131dp"
+
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textColor="#212121" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/_ques"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="75dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:orientation="vertical">
+
+        <CheckBox
+            android:id="@+id/OptionA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+
+            android:textColor="#212121"
+
+            />
+
+        <CheckBox
+            android:id="@+id/OptionB"
+            android:layout_width="wrap_content"
+
+            android:layout_height="wrap_content"
+            android:layout_marginTop="45dp"
+            android:background="#FFFFFF"
+
+            android:textColor="#212121" />
+
+        <CheckBox
+            android:id="@+id/OptionC"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="43dp"
+
+            android:background="#FFFFFF"
+
+            android:textColor="#212121" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/Next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/linearLayout"
+        android:layout_marginBottom="38dp"
+        android:background="#FFFFFF"
+        android:text="@string/next"
+        android:textColor="#212121" />
+
+    <Button
+        android:id="@+id/Submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/Next"
+        android:layout_alignEnd="@+id/linearLayout"
+        android:layout_alignRight="@+id/linearLayout"
+        android:background="#FFFFFF"
+        android:text="@string/submit"
+        android:textColor="#212121" />
+
+    <TextView
+        android:id="@+id/count"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/_ques"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"
+        android:background="#FFFFFF"
+        android:elevation="8dp"
+        android:text="@string/scorevalue"
+        android:textAlignment="center"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#212121" />
+
+
+</RelativeLayout>

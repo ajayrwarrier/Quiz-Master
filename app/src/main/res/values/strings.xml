@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Quiz Master</string>
+    <string name="yourscoretext">YOUR SCORE!:</string>
+    <string name="scorevalue">0/8</string>
+    <string name="retry">TRY AGAIN!</string>
+    <string name="starttext">START QUIZ!</string>
+    <string name="start">START</string>
+    <string name="next">NEXT</string>
+    <string name="submit">SUBMIT</string>
+    <string name="name">QUIZ MASTER</string>
+</resources>
