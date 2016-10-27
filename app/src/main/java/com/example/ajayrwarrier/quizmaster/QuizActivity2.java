@@ -7,6 +7,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -114,47 +115,97 @@ public class QuizActivity2 extends Activity {
     private void CheckAnswer(int i) {
         AnsScore = 0;
         if (i < 3) {
-            if (opA.isChecked()) {
-                if ((opA.getText() == Questionlist.get(i).getANS() || opA.getText() == Questionlist.get(i).getANS2() || opA.getText() == Questionlist.get(i).getANS3())) {
 
-                    AnsScore++;
+            //A checked B and C unchecked.
+            if (opA.isChecked()&&!opB.isChecked()&&!opC.isChecked()) {
+                if(!Checker(opB,i)&&!Checker(opC,i)){
+                if (Checker(opA,i)){
 
+                    score2++;
+
+                }}
+            }
+            //B checked A and C unchecked.
+            else if (opB.isChecked()&&!opA.isChecked()&&!opC.isChecked()) {
+                if(!Checker(opC,i)&&!Checker(opA,i)){
+                    if (Checker(opB,i)){
+
+                        score2++;
+
+                    }}
+            }
+            //C checked B and A unchecked.
+
+            else if (opC.isChecked()&&!opB.isChecked()&&!opA.isChecked()) {
+                if(!Checker(opA,i)&&!Checker(opB,i)){
+                    if (Checker(opC,i)){
+
+                        score2++;
+
+                    }}
+            }
+            //A and C checked B Unchecked.
+           else if (opA.isChecked() && opC.isChecked() && !opB.isChecked() ) {
+              if(!Checker(opB,i)){
+                  if(Checker(opA,i)&&Checker(opC,i)){
+                      score2++;
+                  }
+              }
+            }
+            //A and B checked C Unchecked.
+            else if (opA.isChecked() && opB.isChecked() && !opC.isChecked() ) {
+
+                if(!Checker(opC,i)){
+                    if(Checker(opA,i)&&Checker(opB,i)){
+                        score2++;
+                    }
+                }
+
+                }
+
+            //B and C checked A Unchecked.
+           else if (opB.isChecked() && opC.isChecked() && !opA.isChecked() ) {
+            if(!Checker(opA,i)){
+                if(Checker(opC,i)&&Checker(opB,i)){
+                    score2++;
                 }
             }
 
-            if (opB.isChecked()) {
-                if ((opB.getText() == Questionlist.get(i).getANS() || opB.getText() == Questionlist.get(i).getANS2() || opB.getText() == Questionlist.get(i).getANS3())) {
+        }
+            //A B and C Checked.
+            else if (opB.isChecked() && opC.isChecked() && opA.isChecked() ) {
 
-                    AnsScore = AnsScore + 2;
+           if(Checker(opA,i)&&Checker(opB,i)&&Checker(opC,i)){
 
-                }
-            }
-            if (opC.isChecked()) {
-                if ((opC.getText() == Questionlist.get(i).getANS() || opC.getText() == Questionlist.get(i).getANS2() || opC.getText() == Questionlist.get(i).getANS3())) {
-
-                    AnsScore = AnsScore + 3;
-
-                }
-            }
-            UpdateScore(i, AnsScore);
+               score2++;
+           }
 
 
-        } else {
+            }}
+
+         else {
             NextActivity();
 
         }
     }
 
-    private void UpdateScore(int i, int AnsScore) {
+    /*private void UpdateScore(int i, int AnsScore) {
         if (AnsScore == Questionlist.get(i).getANScount() || AnsScore == 5 || AnsScore == 4) {
             score2++;
         }
 
-    }
+    }*/
 
     private void NextActivity() {
         Intent intent = new Intent(QuizActivity2.this, FinalActivity.class);
         intent.putExtra("SCORE", String.valueOf(score1 + score2));
         startActivity(intent);
+    }
+    private boolean Checker(CheckBox box,int i){
+        if ((box.getText() == Questionlist.get(i).getANS() || box.getText() == Questionlist.get(i).getANS2()
+                || box.getText() == Questionlist.get(i).getANS3())){
+            return true;
+        }
+        else return false;
     }
 }
